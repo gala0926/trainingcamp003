@@ -1,3 +1,8 @@
+/**
+括号有效配对，
+	问题1：怎么判断一个括号字符串有效
+	问题2：如果一个括号字符串无效，返回至少添加字符能让其整体有效
+/**
 package class01;
 
 public class Code02_NeedParentheses {

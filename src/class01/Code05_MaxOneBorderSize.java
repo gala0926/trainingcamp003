@@ -1,3 +1,13 @@
+/**
+给定一个N*N的矩阵matrix，只有0和1，返回边框全是1的最大正方形的边长长度
+
+01111
+01001
+01001
+01111
+01011
+正方形是4*4，所有返回边长等于4
+**/
 package class01;
 
 public class Code05_MaxOneBorderSize {

@@ -1,3 +1,9 @@
+/**
+给定一个数组arr，长度为N，你可以把任意长度大于0且小于N的前缀作为左部分，剩下的作为右部分
+但是每种划分下都有左部分的最大值和右部分的最大值，请返回最大的左部分减去最大的右部分的最大的绝对值
+
+解法：从arr中找打最大值，然后比较arr[0] , arr[N-1], 选择小的那个，答案就是 max - min(arr[0] , arr[N-1])
+**/
 package class02;
 
 public class Code03_MaxABSBetweenLeftAndRight {

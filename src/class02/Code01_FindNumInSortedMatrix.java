@@ -1,3 +1,8 @@
+/**
+在行有序，列也有序的二维数组中，找num，找到返回true，否则false
+
+解法：设置起始位置为右上角
+**/
 package class02;
 
 public class Code01_FindNumInSortedMatrix {

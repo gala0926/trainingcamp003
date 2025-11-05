@@ -1,3 +1,12 @@
+/**
+给定两个字符串str1 和 str2，求两个字符串的最长公共子串
+
+解法：
+str1每个字符作行，str2每个字符作列
+dp[i][j]：公共子串必须以str1[i]结尾且以str2[j]结尾的长度
+
+当str1[i]与str2[j]相等的情况下，dp[i][j]的长度等于左上方的值+1
+**/
 package class03;
 
 public class Code05_LCSubstring {

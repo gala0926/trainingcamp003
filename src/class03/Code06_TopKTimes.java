@@ -1,3 +1,6 @@
+/**
+给定一个由字符串组成的数组String[] strs. 给定一个正数k，返回词频最大的前k个字符串
+**/
 package class03;
 
 import java.util.Comparator;

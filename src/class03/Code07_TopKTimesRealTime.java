@@ -1,3 +1,17 @@
+/**
+请实现如下结构：
+TopRecord {
+	public TopRecord(int k): 构造时事先指定好k的大小，构造后就固定不变了
+	public void add(String str)：向该结构中加入一个字符串，可以重复加入
+	public List<String, String> top():返回之前加入的所有字符串中，词频最大的k个
+}
+要求，add方法，O(logk), top方法，O(K)
+
+解法：
+- HashMap 维护词频
+- 小根堆 维护前k个词频
+- indexMap 维护在堆上的位置
+**/
 package class03;
 
 import java.util.HashMap;

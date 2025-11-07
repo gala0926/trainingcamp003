@@ -1,3 +1,7 @@
+/**
+给定两个字符串s1和s2，问s2最少删除多少字符可以成为s1的子串？
+比如，s1=abcde，s2=axbc，返回1。删除s2中的x就可以
+**/
 package class05;
 
 import java.util.ArrayList;

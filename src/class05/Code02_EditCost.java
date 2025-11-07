@@ -11,14 +11,11 @@ dp[i][j]: str1前i个 与 str2前j个的最小编辑代价
 可能性：
 1. 保留i-1的字符串
 	- 使得 str1[i-1] == str2[j-1]， 
-		- str1[i-1] == str2[j-1], dp[i][j] = dp[i-1][j-1] + 0
-	- str1[i-1] != str2[j-1],
-
-可能性：
-- 如果 str1[i] = str2[j], dp[i][j] = dp[i-1][j-1] + 0
-- str1[i].length = str2[j].length, str1之前str1[i-1]编辑成str2[j-1]所需代价 + 一个替换的代价，dp[i][j] = dp[i-1][j-1] + rc 
-- str1[i].length > str2[j].length，dp[i][j] = dp[i-1][j] + dc 
-- str1[i].length < str2[j].length，dp[i][j] = dp[i][j-1] + ic 
+		- 如果 str1[i-1] == str2[j-1], dp[i][j] = dp[i-1][j-1] + 0
+		- 如果 str1[i-1] != str2[j-1], dp[i][j] = dp[i-1][j-1] + rc
+	- 使得 str1[i-1] == str2[j-2]，再承担一个ic代价，dp[i][j] = dp[i][j-1] + ic
+2. 不保留i-1的字符串
+	- 使得 str1[i-2] == str2[j-1]，再承担一个dc代价，dp[i][j] = dp[i-1][j] + dc
 **/
 package class05;
 

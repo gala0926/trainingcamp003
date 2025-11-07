@@ -1,3 +1,25 @@
+/**
+给定两个字符串str1 和 str2，再给定三个整数ic, dc 和rc，分别代表插入，删除和替换一个字符的代价，返回将str1编辑成str2的最小代价
+比如：
+str1 = abc， str2 = adc，ic=5， dc=3， rc=2， 把b替换成d是代价最小的，所以返回2
+str1 = abc， str2 = adc，ic=5， dc=3， rc=100， 先删除b，然后插入d是代价最小的，所以返回8
+
+解法：一个样本作行，一个样本作列的对应模型 (str1 行，str2 列）
+dp[i][j]: str1前i个 与 str2前j个的最小编辑代价
+- 0行表示，str1一个字符串也没有的时候，如何编辑成str2
+
+可能性：
+1. 保留i-1的字符串
+	- 使得 str1[i-1] == str2[j-1]， 
+		- str1[i-1] == str2[j-1], dp[i][j] = dp[i-1][j-1] + 0
+	- str1[i-1] != str2[j-1],
+
+可能性：
+- 如果 str1[i] = str2[j], dp[i][j] = dp[i-1][j-1] + 0
+- str1[i].length = str2[j].length, str1之前str1[i-1]编辑成str2[j-1]所需代价 + 一个替换的代价，dp[i][j] = dp[i-1][j-1] + rc 
+- str1[i].length > str2[j].length，dp[i][j] = dp[i-1][j] + dc 
+- str1[i].length < str2[j].length，dp[i][j] = dp[i][j-1] + ic 
+**/
 package class05;
 
 public class Code02_EditCost {

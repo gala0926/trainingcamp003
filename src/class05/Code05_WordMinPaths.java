@@ -1,3 +1,17 @@
+/**
+给定两个字符串，记为start 和 to，再给定一个字符串列表list，list中一定包含to，list中没有重复字符串，所有的字符串都是小写的
+规定：start每次只能改变一个字符，最终的目标是彻底变成to，但是每次变成的新字符串必须在list中存在。请返回所有最短的变换路径
+
+例如： start="abc", to="cab", list={"cab", "acc", "cbc", "ccc", "cac", "cbb", "aab", "abb"},转换路径的方法有多种
+abc->abb->aab->cab
+abc->abb->cbb->cab
+abc->cbc->cac->cab
+abc->cbc->cbb->cab
+
+解法：
+- 通过list，转换成一张map，key：每个字符串，value：list存对于key来说只需要动一个字符就能变的
+- 通过生成的map，宽度优先遍历每个字符串到start的距离 getDistances
+**/
 package class05;
 
 import java.util.ArrayList;

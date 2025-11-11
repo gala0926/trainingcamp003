@@ -1,3 +1,11 @@
+/**
+给定一个由（0）假，（1）真，& （逻辑与），|（逻辑或）和 ^（逻辑异或）五种字符组成的字符串express，再给定一个布尔值desired。返回express能有多少种组合方法，可以达到deseired的结果
+举例："1^0|0|1"，desired=False，只有1^(0|0|1) 1^(0(|0|1))的组合可以得到false，返回2
+
+解法：范围尝试模型，int f(L, R, desired)，返回有多少种
+- 假设以i位置上的符号为最后运算的符号
+- L R位置只会压中 0 和 1
+**/
 package class06;
 
 public class Code02_ExpressionNumber {
@@ -92,6 +100,8 @@ public class Code02_ExpressionNumber {
 			tMap[i][i] = str[i] == '1' ? 1 : 0;
 			fMap[i][i] = str[i] == '0' ? 1 : 0;
 		}
+		// row = N - 3 因为 N-1 只有右侧最下的位置，又是对角线，已经填过了，所以不用填了。N-2是符号位 不用管
+		// col = row + 2开始，因为 col = row 是对角线已经填过了，row + 1 是符号位，不用管
 		for (int row = N - 3; row >= 0; row -= 2) {
 			for (int col = row + 2; col < N; col += 2) {
 				// row..col tMap fMap

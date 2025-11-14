@@ -1,3 +1,12 @@
+/**
+交错排列
+
+解法：一张二维表，dp[i][j]表示str1前缀长度为i(str1[0...i-1])，与str2前缀长度为j(str2[0...j-1])，能否拼凑出str3前缀长度为i+j(str3[0...i+j-1])
+
+可能性：
+- str3[i+j-1] == str1[i-1], 那么就依赖dp[i-1][j]的结果
+- str3[i+j-1] == str2[j-1], 那么就依赖dp[i][j-1]的结果
+**/
 package class06;
 
 public class Code06_StringCross {

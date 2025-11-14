@@ -1,3 +1,8 @@
+/**
+数组最小不可组成和
+
+解法1：类背包问题，行：0 - arr.length -1 , 列：0 - 数组累加和，dp[i][j]表示arr[0...i]的累加和是否可以等于sum[j], 于是最终答案就在最后行上，从sum min - sum中，第一个为false的位置
+**/
 package class07;
 
 import java.util.Arrays;

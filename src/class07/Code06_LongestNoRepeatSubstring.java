@@ -1,3 +1,12 @@
+/**
+在一个字符串中找到没有重复字符子串中最长的长度
+例如：abcabcbb，没有重复的最长子串是abc，返回3；bbbbb，没有重复子串是b，返回1
+
+解法：以i位置结尾时，不重复子串的最长长度
+- Map记录每个字符上一次出现的位置，
+- i-1 位置所能延伸的最左位置
+- 两者取大（位置偏后）
+**/
 package class07;
 
 public class Code06_LongestNoRepeatSubstring {

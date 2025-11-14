@@ -1,3 +1,7 @@
+/**
+给定一个有序正数数组arr和一个正数range，如果可以自由选择arr中的数字，想累加得到1 ~ range范围上的数，返回arr最少还缺几个数
+例如： arr = [1,2,3,7], range = 15， arr 还缺14这个数，所以返回1
+**/
 package class07;
 
 import java.util.Arrays;
